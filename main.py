@@ -75,7 +75,13 @@ def handle_bullets(blue_bullets,red_bullets,blue,red):
             red_bullets.remove(bullet)
             bullet_hit_sound.play()
         elif bullet.x < 0:
-            red_bullets.remove(bullet)     
+            red_bullets.remove(bullet)
+    #bullet colision
+    for red_bullet in red_bullets:
+        for blue_bullet in blue_bullets:
+            if red_bullet.colliderect(blue_bullet):
+                red_bullets.remove(red_bullet)
+                blue_bullets.remove(blue_bullet)
 def blue_movement(keys_pressed,blue): 
     keys_pressed = pygame.key.get_pressed()
     if keys_pressed[pygame.K_a] and blue.x - velocity > 0: #lef
