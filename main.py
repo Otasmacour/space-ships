@@ -38,7 +38,7 @@ blue_hit = pygame.USEREVENT + 1
 red_hit = pygame.USEREVENT + 2
 
 left_white_bar = pygame.Rect(10,10,100,20)
-pravý_white_bar = pygame.Rect(790,10,100,20)
+right_white_bar = pygame.Rect(790,10,100,20)
 
 bonus_image = pygame.image.load(
     os.path.join("Assets","bonus.png"))
@@ -114,7 +114,7 @@ def draw_window(
     win.blit(background,(0,0))
     pygame.draw.rect(win,BLACK, border)
     pygame.draw.rect(win,WHITE,left_white_bar)
-    pygame.draw.rect(win,WHITE,pravý_white_bar)
+    pygame.draw.rect(win,WHITE,right_white_bar)
     pygame.draw.rect(win,RED,left_health_bar)
     pygame.draw.rect(win,RED,right_health_bar)
     if red_health_points > 0 and blue_health_points > 0:
