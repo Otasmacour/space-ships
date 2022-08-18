@@ -277,7 +277,6 @@ def main(blue_health_points,red_health_points,bonus_number,x,y):
                 red_health_points += healt_adding
                 collect_sound.play()
         keys_pressed = pygame.key.get_pressed()
-
         if keys_pressed[K_x]:
             blue_health_points += 1
         if keys_pressed[K_u]:
