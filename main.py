@@ -83,7 +83,6 @@ def handle_bullets(blue_bullets,red_bullets,blue,red):
                 red_bullets.remove(red_bullet)
                 blue_bullets.remove(blue_bullet)
 def blue_movement(keys_pressed,blue): 
-    keys_pressed = pygame.key.get_pressed()
     if keys_pressed[pygame.K_a] and blue.x - velocity > 0: #lef
             blue.x -= velocity
     if keys_pressed[pygame.K_d] and blue.x + velocity < width - velocity and blue.x < width/2 - spaceship_width+10:
@@ -95,7 +94,6 @@ def blue_movement(keys_pressed,blue):
         if blue.y + velocity <= height - spaceship_height - 18:# down
             blue.y += velocity
 def red_movement(keys_pressed,red):
-    keys_pressed = pygame.key.get_pressed()
     if keys_pressed[pygame.K_LEFT]and red.x - velocity >= 0 and red.x > width/2 + 6 :
         red.x -= velocity
     if keys_pressed[pygame.K_RIGHT]:
